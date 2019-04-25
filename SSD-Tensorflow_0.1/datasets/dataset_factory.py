@@ -23,18 +23,11 @@ from __future__ import print_function
 
 from datasets import pascalvoc_2007
 from datasets import pascalvoc_2012
-from datasets import pascalvoc_0712
-from datasets import pascalvoc_07pp12
-from datasets import pascalvoc_visdrone
-from datasets import pascalvoc_unt_aerial_dataset
+
 
 datasets_map = {
     'pascalvoc_2007': pascalvoc_2007,
     'pascalvoc_2012': pascalvoc_2012,
-    'pascalvoc_0712': pascalvoc_0712,
-    'pascalvoc_07pp12': pascalvoc_07pp12,
-    'pascalvoc_visdrone': pascalvoc_visdrone,
-    'unt_aerial_dataset': pascalvoc_unt_aerial_dataset
 }
 
 
