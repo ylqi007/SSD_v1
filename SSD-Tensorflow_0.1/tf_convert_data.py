@@ -29,8 +29,6 @@ python tf_convert_data.py \
 import tensorflow as tf
 
 from datasets import pascalvoc_to_tfrecords
-from datasets import visdrone_to_tfrecords
-from datasets import unt_aerial_to_tfrecords
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -59,10 +57,6 @@ def main(_):
 
     if FLAGS.dataset_name == 'pascalvoc':
         pascalvoc_to_tfrecords.run(FLAGS.dataset_dir, FLAGS.output_dir, FLAGS.output_name)
-    elif FLAGS.dataset_name == 'visdrone':
-        visdrone_to_tfrecords.run(FLAGS.dataset_dir, FLAGS.output_dir, FLAGS.output_name)
-    elif FLAGS.dataset_name == 'unt_aerial_dataset':
-        unt_aerial_to_tfrecords.run(FLAGS.dataset_dir, FLAGS.output_dir, FLAGS.output_name)
     else:
         raise ValueError('Dataset [%s] was not recognized.' % FLAGS.dataset_name)
 
